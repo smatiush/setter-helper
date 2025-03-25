@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Route Setter Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+    <h1>Route Setter Dashboard</h1>
+</header>
+
+<main class="container">
+    <!-- Walls Section -->
+    <section id="walls" class="data-section">
+        <h2>Walls</h2>
+        <!-- List to display existing walls -->
+        <ul id="wall-list"></ul>
+
+        <!-- Form to create a new wall -->
+        <form id="wall-form" class="form-box">
+            <h3>Add a New Wall</h3>
+
+            <label for="wall-name">Wall Name:</label>
+            <input type="text" id="wall-name" name="wall-name" required />
+
+            <label for="wall-location">Location:</label>
+            <input type="text" id="wall-location" name="wall-location" required />
+
+            <label for="wall-type">Type:</label>
+            <select id="wall-type" name="wall-type" required>
+                <option value="slab">Slab</option>
+                <option value="vertical">Vertical</option>
+                <option value="overhang">Overhang</option>
+            </select>
+
+            <button type="submit">Add Wall</button>
+        </form>
+    </section>
+
+    <!-- Routes Section -->
+    <section id="routes" class="data-section">
+        <h2>Routes</h2>
+        <!-- List to display existing routes -->
+        <ul id="route-list"></ul>
+
+        <!-- Form to create a new route -->
+        <form id="route-form" class="form-box">
+            <h3>Add a New Route</h3>
+
+            <label for="route-name">Route Name:</label>
+            <input type="text" id="route-name" name="route-name" required />
+
+            <label for="route-grade">Grade:</label>
+            <input type="text" id="route-grade" name="route-grade" required />
+
+            <label for="route-color">Holds Color:</label>
+            <input type="text" id="route-color" name="route-color" required />
+
+            <label for="route-date">Created Date:</label>
+            <input type="date" id="route-date" name="route-date" required />
+
+            <label for="wall-select">Assign to Wall:</label>
+            <select id="wall-select" name="wall-select" required>
+                <!-- Populated dynamically with wall options -->
+            </select>
+
+            <label for="setter-select">Assign Setter:</label>
+            <select id="setter-select" name="setter-select" required>
+                <!-- Populated dynamically with setter options -->
+            </select>
+
+            <button type="submit">Add Route</button>
+        </form>
+    </section>
+</main>
+
+<!-- Error message area -->
+<div id="error-message" class="error"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
