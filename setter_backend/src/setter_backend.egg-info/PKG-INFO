@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: setter_backend
+Version: 0.0.1
+Summary: Backend for Rambla Vertical route track 
+Author: Mattia Senni
+Requires-Python: >=3.12
+Requires-Dist: annotated-doc==0.0.4
+Requires-Dist: annotated-types==0.7.0
+Requires-Dist: anyio==4.12.0
+Requires-Dist: fastapi==0.127.0
+Requires-Dist: idna==3.11
+Requires-Dist: pydantic==2.12.5
+Requires-Dist: pydantic_core==2.41.5
+Requires-Dist: starlette==0.50.0
+Requires-Dist: typing-inspection==0.4.2
+Requires-Dist: typing_extensions==4.15.0
+Requires-Dist: uvicorn==0.40.0
