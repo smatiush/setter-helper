@@ -6,6 +6,7 @@
       <v-spacer></v-spacer>
       <v-btn text :to="{ name: 'Walls' }">Walls</v-btn>
       <v-btn text :to="{ name: 'Routes' }">Routes</v-btn>
+      <v-btn text :to="{ name: 'Explore' }">Explore</v-btn>
     </v-app-bar>
 
     <!-- Visualizza il contenuto della pagina corrente -->
