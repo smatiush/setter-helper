@@ -2,14 +2,11 @@ from typing import List
 
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from setter_backend.src.setter_backend.utils.database import SessionLocal
+from setter_backend.src.setter_backend.utils.database import get_session_local
 from setter_backend.src.setter_backend.schema import schema as schemas
 from setter_backend.src.setter_backend.utils import CRUD as crud
 
 router = APIRouter()
-
-def get_session_local():
-    yield SessionLocal()
 
 @router.get("/", response_model=List[schemas.SetterResponse])
 def get_setters(db: Session = Depends(get_session_local)):
